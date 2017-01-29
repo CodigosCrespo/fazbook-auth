@@ -1,4 +1,4 @@
-const passport = require('passport)');
+const passport = require('passport');
 const models = require('../db/models/index');
 
 module.exports = () => {

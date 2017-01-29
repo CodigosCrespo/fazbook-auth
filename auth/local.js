@@ -9,7 +9,7 @@ const options = {};
 
 init();
 
-passport.user(new LocalStrategy(options, (username, password, done) => {
+passport.use(new LocalStrategy(options, (username, password, done) => {
   // check to see if the username exists
   models.User.findAll({
     where: {
