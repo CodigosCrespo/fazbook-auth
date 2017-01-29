@@ -8,10 +8,9 @@ function comparePass(userPassword, databasePassword) {
 
 // user redirected if already logged in
 function loginRedirect(req, res, next) {
-  if (req.user) returnres.status(401).json(
+  if (req.user) return res.status(401).json(
     { status: 'You are already logged in!' }
   );
-
   return next();
 }
 
@@ -35,5 +34,5 @@ function createUser(req, res) {
 // protects route from non-logged in users
 function loginRequired(req, res, next) {
   if (!req.user) return res.status(401).json({ status: 'Please log in'});
-  return next;
+  return next();
 }
