@@ -31,3 +31,9 @@ function createUser(req, res) {
     res.redirect('/');
   });
 }
+
+// protects route from non-logged in users
+function loginRequired(req, res, next) {
+  if (!req.user) return res.status(401).json({ status: 'Please log in'});
+  return next;
+}
