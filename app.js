@@ -4,7 +4,17 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-// add new modules and files here
+// passport authentication modules
+const session = require('express-session');
+const passport = require('passport');
+
+const index = require('./routes/index');
+const authRoutes = require('./routes/auth.js');
+const userRoutes = require('./routes/user.js');
+const app = express();
+
+// laod environment variables
+require('dotenv').config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
