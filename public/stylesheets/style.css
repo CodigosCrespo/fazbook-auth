@@ -1,13 +1,8 @@
-header {
-  background-color: black;
-  color: red;
-}
-
 header .container h1 {
   font-size: 36px;
 }
 
-main{
+main {
   flex: 1 0 auto;
   color: white;
 }
@@ -47,4 +42,8 @@ main {
 
 footer.footer-page {
   background-color: #fff;
+}
+
+.buttons, .buttons a {
+  color: #BF015F;
 }
