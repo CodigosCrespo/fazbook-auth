@@ -2,13 +2,12 @@
   <body>
     <% include ../partials/header.ejs %>
     <main>
-      <div class="container">
+      <div class="user-container">
         <p>Hello, this is the user profile page!</p>
-        <p><%= user.firstName %></p>
-        <p><%= user.lastName %></p>
-        <p><%= user.email %></p>
-        <p><%= user.dob %></p>
-        <a href="/auth/logout">LOG OUT</a>
+        <p>First Name: <%= user.firstName %></p>
+        <p>Last Name: <%= user.lastName %></p>
+        <p>Email: <%= user.email %></p>
+        <p>Birthday: <%= user.dob %></p>
       </div>
     </main>
     <% include ../partials/footer.ejs %>
